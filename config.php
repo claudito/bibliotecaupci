@@ -4,7 +4,7 @@ date_default_timezone_set('America/Lima');
 
 $key = "UPCI_BIBLIOTECA_2016"; #Key Sesion
 
-define('PATH', 'http://biblioteca.upci.online/'); #Path
+define('PATH', 'http://localhost/biblioteca/'); #Path
 
 define('SERVERBD', 'localhost');#SERVER BD MYSQL
 
