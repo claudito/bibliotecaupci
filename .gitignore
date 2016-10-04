@@ -6,8 +6,8 @@
 # [Bb]in/ # FlashDevelop bin
 
 # Other files and folders
- .config.php/
- ..htacccess/
+ /config.php
+ /.htacccess
 
 # Executables
 # *.swf
