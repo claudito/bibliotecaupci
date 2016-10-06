@@ -1,3 +1,16 @@
+
+
+<?php
+
+session_start();
+
+$completo=  $_SESSION['upci_nombres'].' '.$_SESSION['upci_apellidos'];
+
+  ?>
+
+
+
+
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -78,7 +91,7 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><i class="glyphicon glyphicon-user text-success"></i>
-        Luis Claudio</a></li>
+        <?php echo $completo; ?></a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -86,7 +99,7 @@
             <li><a href="#">Perfil</a></li>
             <li><a href="#">Herramientas</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Salir</a></li>
+            <li><a href="<?php echo PATH; ?>/procesos/cerrar-sesion.php">Salir</a></li>
           </ul>
         </li>
       </ul>

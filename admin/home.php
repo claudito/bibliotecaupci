@@ -5,7 +5,8 @@
 	<meta charset="UTF-8">
 	<title>Bienvenidos Biblioteca Upci</title>
 <?php include('../templates/enlaces/principal.php'); ?>
-<link rel="stylesheet" href="http://localhost/biblioteca/assets/css/foooter.css">
+
+<link rel="stylesheet" href="<?php echo PATH; ?>/biblioteca/assets/css/foooter.css">
 </head>
 <body>
 <div class="container-fluid">

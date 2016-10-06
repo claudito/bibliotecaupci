@@ -6,12 +6,22 @@
 <!-- Inicio Bootstrap 3  -->
 <!-- css -->
 
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+
+
+<link rel="stylesheet" href="<?php echo PATH ?>assets/librerias/Bootstrap/css/bootstrap.min.css">
+
 
 <!-- js -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
+<script src="<?php echo PATH ?>assets/librerias/Jquery/jquery.min.js"></script>
+
+<script src="<?php echo PATH ?>assets/librerias/Bootstrap/js/bootstrap.min.js"></script>
+
+
 
 <!-- Fin Bootstrap 3  -->
 
@@ -20,6 +30,7 @@
 
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
+<!--<script src="<?php //echo PATH ?>assets/librerias/Fontawesome/css/font-awesome.css"></script>-->
 <!-- Fin FontAwesome -->
 
 <!-- Inicio Google Fonts -->

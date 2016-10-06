@@ -13,15 +13,16 @@
 <script src="templates/ajax/crear-cuenta.js"></script>
 
 
-<link rel="stylesheet" href="<?php echo PATH ?>assets/css/estilos-login.css">
+<!--<link rel="stylesheet" href="<?php //echo PATH ?>/biblioteca/assets/css/estilos-login.css">-->
 
 
-<link rel="shortcut icon" type="image/x-icon" href="<?php echo PATH ?>assets/img/logoupci.png">
+<link rel="shortcut icon" type="image/x-icon" href="<?php echo PATH ?>/assets/img/logoupci.png">
 
 <style>
 /*FONDO DE LOGIN PRINCIPAL*/
 body{
-background: url(http://i.imgur.com/GHr12sH.jpg) no-repeat center center fixed;
+background: url(http://biblioteca.upci.online/assets/img/fondo.jpg) no-repeat center center fixed;
+/*http://i.imgur.com/GHr12sH.jpg)*/
 }
 </style>
 
@@ -34,15 +35,15 @@ background: url(http://i.imgur.com/GHr12sH.jpg) no-repeat center center fixed;
     
     <div class="col-md-4">
       <section class="login-form">
-        <form method="post" action="templates/home"  autocomplete="off">
-          <img src="<?php echo PATH ?>assets/img/logoupci.png" class="img-responsive" alt="" />
+        <form method="post" action="<?php echo PATH ?>/procesos/acceso.php"  autocomplete="off">
+          <img src="<?php echo PATH ?>/assets/img/logoupci.png" class="img-responsive" alt="" />
           <div class="form-group">
           <input type="text" name="usuario" placeholder="Usuario" required class="form-control input-lg"  autofocus="" value="1107000044" />
           </div>
 
           
           <div class="form-group">
-          <input type="password" name="contrasena" class="form-control input-lg"  placeholder="Contraseña" required=""  pattern="[a-zA-Z0-9]+" value="1107000044" />
+          <input type="password" name="contrasena" class="form-control input-lg"  placeholder="Contraseña" required=""  pattern="[a-zA-Z0-9]+" value="123456" />
           </div>
           
          

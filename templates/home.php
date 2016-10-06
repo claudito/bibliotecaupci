@@ -16,7 +16,7 @@
 <div class="row">
 <div class="col-md-12">
 <center>
-<img src="<?php echo PATH; ?>assets/img/logoupci.png" alt="upci" class="img-responsive">
+<img src="<?php echo PATH; ?>/assets/img/logoupci.png" alt="upci" class="img-responsive">
 </center>
 <h1 class="text-center">Consulta  de libros, Tesis y generación de fichas.</h1>
 </div>
