@@ -13,7 +13,7 @@
 <script src="templates/ajax/crear-cuenta.js"></script>
 
 
-<!--<link rel="stylesheet" href="<?php //echo PATH ?>/biblioteca/assets/css/estilos-login.css">-->
+<link rel="stylesheet" href="<?php echo PATH ?>/assets/css/estilos-login.css">
 
 
 <link rel="shortcut icon" type="image/x-icon" href="<?php echo PATH ?>/assets/img/logoupci.png">
@@ -21,7 +21,7 @@
 <style>
 /*FONDO DE LOGIN PRINCIPAL*/
 body{
-background: url(http://biblioteca.upci.online/assets/img/fondo.jpg) no-repeat center center fixed;
+background: url(<?php echo PATH; ?>/assets/img/fondo.jpg) no-repeat center center fixed;
 /*http://i.imgur.com/GHr12sH.jpg)*/
 }
 </style>
