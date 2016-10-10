@@ -1,131 +1,82 @@
 <?php 
+
 class Acceso
 {
 
 protected $user;
 protected $pass;
 
-public function __construct($usuario,$password)
+
+function __construct($user,$pass)
 {
-$this->user = addslashes($usuario);
-$this->pass = addslashes($password);
+
+$this->user = addslashes($user);
+$this->pass = addslashes($pass); 
 
 }
 
-public function  Login()
+function Login()
 {
+$db      = new Conexion();
+$query   = "SELECT * FROM login WHERE UPPER(user)=UPPER('$this->user') 
+            AND pass='$this->pass' AND estado='on'";
+$result  = $db->query($query);
+$numfila = $result->num_rows;
+$dato    = mysqli_fetch_array($result);
+if ($numfila >0) 
+{
+	
+session_start();
+$_SESSION[KEY.USUARIO]   = $dato['idlogin'];
+$_SESSION[KEY.NOMBRES]   = $dato['nombres'];
+$_SESSION[KEY.APELLIDOS] = $dato['apellidos'];
+$_SESSION[KEY.TIPO]      = $dato['tipo'];
 
-
-$db = new Conexion();
-
-$query="SELECT idusuarios,			
-						 nombres,
-						 apellidos,
-						 tipo_usuarios_idtipo_usuarios,
-						 estado,
-						 usuario,
-						 contrasena FROM  
-					usuarios WHERE usuario='$this->user' AND 
-			 contrasena='$this->pass'";
-
-//echo $query;
-//die();
-
-$sql= $db->query($query);
-
-
-$dato = $db->recorrer($sql);
-
-
-if (strtolower($dato['usuario'])==strtolower($this->user) 
-	and $dato['contrasena']==$this->pass
-	 )
-
-{ 
-
-
-	if ($dato['tipo_usuarios_idtipo_usuarios']==1) {
-
-			session_start();
-
-			$_SESSION['upci_nombres']=$dato['nombres'];
-			$_SESSION['upci_apellidos']=$dato['apellidos'];
-			$_SESSION['upci_tipos']=$dato['tipo_usuarios_idtipo_usuarios'];
-			$_SESSION['upci_estado']=$dato['estado'];
-			$_SESSION['upci_idusuario']=$dato['idusuarios'];
-		
-
-			header('Location: /admin/home.php');
-
-
-		//echo "ADMINISTRADOR";
-		//die();
-
-
-
-
-	} else{
-
-		//echo "USUARIO";
-		//die();
-
-			session_start();
-
-			$_SESSION['upci_nombres']=$dato['nombres'];
-			$_SESSION['upci_apellidos']=$dato['apellidos'];
-			$_SESSION['upci_tipos']=$dato['tipo_usuarios_idtipo_usuarios'];
-			$_SESSION['upci_estado']=$dato['estado'];
-			$_SESSION['upci_idusuario']=$dato['idusuarios'];
-
-
-
-			header('Location: /templates/home.php');
-
-	}
-
-
-		
-
+if ($_SESSION[KEY.TIPO]=='admin') 
+{
+  header('Location: '.PATH.'admin');
 }
 else
 {
-header('Location: /biblioteca');
+  header('Location: '.PATH.'');
 }
+
+}
+else
+{ 
+
+echo "
+<script>
+alert('El usuario o contraseña son incorrectos.');
+window.location='".PATH."';
+</script>";
+
 }
 
+}
 
-
-
-function Salir()
+function Logout()
 {
 
 session_start();
-
-if(!isset($_SESSION['upci_idusuario']))
+if (!isset($_SESSION[KEY.USUARIO])) 
 {
-echo "No hay ninguna sesion iniciada";
+header('Location: '.PATH.'');
 }
-//esto ocurre cuando la sesion caduca.
-
-
 else
-{ 
-
-unset($_SESSION['upci_nombres']);
-unset($_SESSION['upci_apellidos']);
-unset($_SESSION['upci_tipos']);
-unset($_SESSION['upci_estado']);
-unset($_SESSION['upci_estado']);
-
-header('Location: /');       
-}
-
-
+{
+  unset($_SESSION[KEY.USUARIO]);
+  unset($_SESSION[KEY.NOMBRES]);
+  unset($_SESSION[KEY.APELLIDOS]);
+  unset($_SESSION[KEY.TIPO]);
+  header('Location: '.PATH.'');
 
 }
 
 
+}
+
 
 }
 
-?>
+ ?>

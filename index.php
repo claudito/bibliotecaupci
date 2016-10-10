@@ -1,15 +1,17 @@
 <?php 
-error_reporting(0);
+
 include('config.php');
 
+session_start();
 
-if (isset($_GET['cuenta'])=='crear') 
+if (!isset($_SESSION[KEY.USUARIO])) 
 {
-	include('templates/crear-cuenta.php');
+  include('includes/bd/conexion.php');
+  include('templates/acceso.php');
 }
 else
 {
-  include('templates/acceso.php');
+  include('templates/home.php');
 }
 
 

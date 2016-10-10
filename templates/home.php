@@ -1,24 +1,28 @@
-<?php include('../config.php'); ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<title>Bienvenidos</title>
-<?php 	include('../templates/enlaces/principal.php'); ?>
+<?php include('templates/enlaces/principal.php'); ?>
 </head>
 <body>
 <div class="container-fluid">
 <div class="row">
 <div class="col-md-12">
-<?php include('../templates/nav/usuario.php'); ?>
+<?php include('templates/nav.php'); ?>
 </div>
 </div>
 <div class="row">
 <div class="col-md-12">
-<center>
-<img src="<?php echo PATH; ?>/assets/img/logoupci.png" alt="upci" class="img-responsive">
-</center>
-<h1 class="text-center">Consulta  de libros, Tesis y generación de fichas.</h1>
+<h1 class="text-center">
+<i class="fa fa-book fa-5x" aria-hidden="true"></i>
+<i class="fa fa-university fa-5x" aria-hidden="true"></i>
+<i class="fa fa-search fa-5x" aria-hidden="true"></i>
+</h1>
+<h1 class="text-center">Consulta de Libros, Tesis y prestamos.</h1>
+
+<center><a href="<?php echo PATH ?>admin" class="btn btn-default">Administrador</a></center>
+
 </div>
 </div>
 </div>
