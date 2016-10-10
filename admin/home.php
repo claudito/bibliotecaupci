@@ -14,6 +14,7 @@
 </div>
 <div class="row">
 <div class="col-md-12">
+<h1 class="text-center text-primary">Universidad Peruana de Ciencias e Informática</h1>
 <h1 class="text-center"><i class="fa fa-book fa-5x" aria-hidden="true"></i></h1>
 <h1 class="text-center">Administrador Biblioteca UPCI</h1>
 <center><a href="<?php echo PATH ?>" class="btn btn-default">Usuario</a></center>
