@@ -15,7 +15,7 @@ $cuerpo ='
 <hr>
 <p>Se creado una nueva solicitud de registro con la siguiente información.</p> 
 <ul>
-<li>Nombres: Luis Augusto</li>
+<li>Nombres: '.$_GET['nombres'].'</li>
 <li>Apellidos: Claudio Ponce</li>
 <li>Correo Electronico: megabyte1507@gmail.com</li>
 <li>Telefóno: 997935085</li>
@@ -38,8 +38,7 @@ $headers .= "Content-type: text/html; charset=UTF-8\r\n";
 
 mail($destinatario,$asunto,$cuerpo,$headers);
 
-echo "correo enviado";
-
+header('Location: '.PATH.'mensaje/usuario-creado');
 
 
 
