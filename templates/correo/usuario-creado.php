@@ -1,38 +1,53 @@
 <?php 
-$destinatario = "biblioteca@upci.online"; 
-$asunto = "Este mensaje es de prueba"; 
-$cuerpo = ' 
+
+
+$destinatario ="biblioteca@upci.online";
+$remitente    ="biblioteca@upci.online";
+$asunto       = "Registro Nuevo"; 
+$cuerpo =' 
 <html> 
 <head> 
-   <title>Prueba de correo</title> 
+<title>Registro Nuevo</title>
+
 </head> 
 <body> 
-<h1>Hola amigos!</h1> 
-<p> 
-<b>Bienvenidos a mi correo electrónico de prueba</b>. Estoy encantado de tener tantos lectores. Este cuerpo del mensaje es del artículo de envío de mails por PHP. Habría que cambiarlo para poner tu propio cuerpo. Por cierto, cambia también las cabeceras del mensaje. 
-</p> 
+<h1>Solicitud de Registro</h1>
+<hr>
+<p>Se creado una nueva solicitud de registro con la siguiente información.</p> 
+<ul>
+<li>Nombres: Luis Augusto</li>
+<li>Apellidos: Claudio Ponce</li>
+<li>Correo Electronico: megabyte1507@gmail.com</li>
+<li>Telefóno: 997935085</li>
+<li>Codigo Universidad: 1107000044</li>
+<li>Contraseña : luicla14</li>
+</ul>
+
 </body> 
 </html> 
 '; 
 
+$headers .= 'From: '.$remitente."\r\n".
+'Reply-To: '.$remitente."\r\n" .
+'X-Mailer: PHP/' . phpversion();
+
 //para el envío en formato HTML 
-$headers = "MIME-Version: 1.0\r\n"; 
-$headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+$headers .= "MIME-Version: 1.0\r\n"; 
+$headers .= "Content-type: text/html; charset=UTF-8\r\n"; 
 
-//dirección del remitente 
-$headers .= "From: Luis Claudio <biblioteca@upci.online>\r\n"; 
 
-//dirección de respuesta, si queremos que sea distinta que la del remitente 
-$headers .= "Reply-To: biblioteca@upci.online\r\n"; 
+mail($destinatario,$asunto,$cuerpo,$headers);
 
-//ruta del mensaje desde origen a destino 
-$headers .= "Return-path: biblioteca@upci.online\r\n"; 
+echo "correo enviado";
 
-//direcciones que recibián copia 
-$headers .= "Cc: biblioteca@upci.online\r\n"; 
 
-//direcciones que recibirán copia oculta 
-$headers .= "Bcc: biblioteca@upci.online,biblioteca@upci.online\r\n"; 
 
-mail($destinatario,$asunto,$cuerpo,$headers) 
+
+
+
+
+
+
+
+
 ?>
