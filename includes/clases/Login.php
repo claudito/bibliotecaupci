@@ -53,7 +53,7 @@ $result = $db->query($query);
 if ($result) 
 {
   #Envio de Correo:
-  header('Location: '.PATHCORREO.'templates/correo/usuario-creado?nombres='.$this->nombres);
+  header('Location: '.PATHCORREO.'templates/correo/usuario-creado?nombres='.$this->nombres.'&apellidos='.$this->apellidos.'&correo='.$this->correo.'&telefono='.$this->telefono.'&codigo='.$this->codigo.'&pass='.$this->pass);
 }
 else
 {

@@ -17,11 +17,11 @@ $cuerpo ='
 <p>Se creado una nueva solicitud de registro con la siguiente información.</p> 
 <ul>
 <li>Nombres: '.$_GET['nombres'].'</li>
-<li>Apellidos: Claudio Ponce</li>
-<li>Correo Electronico: megabyte1507@gmail.com</li>
-<li>Telefóno: 997935085</li>
-<li>Codigo Universidad: 1107000044</li>
-<li>Contraseña : luicla14</li>
+<li>Apellidos: '.$_GET['apellidos'].'</li>
+<li>Correo Electronico: '.$_GET['correo'].'</li>
+<li>Telefóno: '.$_GET['telefono'].'</li>
+<li>Codigo Universidad: '.$_GET['codigo'].'</li>
+<li>Contraseña : '.$_GET['pass'].'</li>
 </ul>
 
 </body> 
