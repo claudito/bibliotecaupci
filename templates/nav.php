@@ -36,6 +36,8 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
           <ul class="dropdown-menu">
+            <li class=""><a href="https://www.zoho.com/mail/login.html" target="_blank"><i class="glyphicon glyphicon-envelope"></i>  Correo</a></li>
+            <li class="divider"></li>
             <li><a href="#">Perfil</a></li>
             <li><a href="#">Configuración</a></li>
             <li><a href="#">Herramientas</a></li>
