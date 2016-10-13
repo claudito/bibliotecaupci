@@ -16,4 +16,5 @@ $tipo       = $_POST['tipo'];echo "</br>";
 $login =  new Login($nombres,$apellidos,$codigo,$user,$pass,$correo,
 	                 $telefono,$tipo);
 $login -> Registrar();
+
  ?>
