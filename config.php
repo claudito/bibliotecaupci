@@ -6,6 +6,8 @@ $key = "UPCI_BIBLIOTECA_2016"; #Key Sesion
 
 define('PATH', 'http://localhost/biblioteca/'); #Path SERVIDOR
 
+define('PATHCORREO','http://biblioteca.upci.online/'); #PATH Correo
+
 define('SERVERBD', 'localhost');                #SERVER BD MYSQL
 
 define('USERBD', 'root');                       #USER BD MYSQL

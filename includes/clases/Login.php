@@ -52,8 +52,8 @@ $query  = "INSERT INTO login(nombres,apellidos,codigo,user,pass,correo,telefono,
 $result = $db->query($query);
 if ($result) 
 {
-  //header('Location: '.PATH.'mensaje/usuario-creado');
-  header('Location: '.PATH.'templates/correo/usuario-creado?nombres='.$this->nombres);
+  #Envio de Correo:
+  header('Location: '.PATHCORREO.'templates/correo/usuario-creado?nombres='.$this->nombres);
 }
 else
 {
