@@ -35,9 +35,7 @@
         <li><a href="#"><i class="glyphicon glyphicon-user text-success"></i> <?php echo $_SESSION[KEY.NOMBRES].' '.$_SESSION[KEY.APELLIDOS]; ?></a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li class=""><a href="https://www.zoho.com/mail/login.html" target="_blank"><i class="glyphicon glyphicon-envelope"></i>  Correo</a></li>
-            <li class="divider"></li>
+          <ul class="dropdown-menu">         
             <li><a href="#">Perfil</a></li>
             <li><a href="#">Configuración</a></li>
             <li><a href="#">Herramientas</a></li>

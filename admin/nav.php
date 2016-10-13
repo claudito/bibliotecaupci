@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Administrador</a>
+      <a class="navbar-brand" href="<?php echo PATH; ?>admin">Administrador</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -17,9 +17,16 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mantenimiento<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Autores</a></li>
-            <li><a href="#">Tipo de Autores</a></li>
+            <li class=""><a href="">Usuarios</a></li>
+            <li><a href="">Tipo de Usuario</a></li>
+            <li><a href="">Facultades</a></li>
+            <li><a href="">Especialidad</a></li>
+            <li><a href="">Turnos</a></li>
             <li class="divider"></li>
+            <li><a href="<?php echo PATH; ?>admin/pages/mantenimiento/autores">Autores</a></li>
+            <li><a href="<?php echo PATH; ?>admin/pages/mantenimiento/tipos-autores">Tipo de Autores</a></li>
+            <li class="divider"></li>
+            <li><a href="">Titulo</a></li>
             <li><a href="#">Editorial</a></li>
             <li><a href="#">Categoria</a></li>
             <li><a href="">Idioma</a></li>
@@ -28,11 +35,7 @@
             <li><a href="">Área Tematica</a></li>
             <li class="divider"></li>
             <li><a href="">Cabinas</a></li>
-            <li class="divider"></li>
-            <li><a href="">Facultades</a></li>
-            <li><a href="">Especialidad</a></li>
-            <li><a href="">Turnos</a></li>
-            <li><a href="">Tipo de Usuario</a></li>
+            
           </ul>
         </li>
       </ul>
@@ -93,6 +96,8 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="caret"></span></a>
           <ul class="dropdown-menu">
+            <li class=""><a href="https://www.zoho.com/mail/login.html" target="_blank"><i class="glyphicon glyphicon-envelope"></i>  Correo</a></li>
+            <li class="divider"></li>
             <li><a href="#">Perfil</a></li>
             <li><a href="#">Configuración</a></li>
             <li><a href="#">Herramientas</a></li>
