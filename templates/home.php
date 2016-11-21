@@ -14,16 +14,22 @@
 </div>
 <div class="row">
 <div class="col-md-12">
-<h1 class="text-center text-primary">Universidad Peruana de Ciencias e Informática</h1>
-<h1 class="text-center">
-<i class="fa fa-university fa-5x" aria-hidden="true"></i>
-</h1>
+<h1 class="text-center">Universidad Peruana de Ciencias e Informática</h1>
+<center>
+<img src="<?php echo PATH ?>/assets/img/palomas.gif"  width="250" class="img-responsive" alt="">
+</center>
+<center>
+<img src="<?php echo PATH ?>/assets/img/tecleando.gif"  width="150" class="img-responsive" alt="">
+</center>
 <h1 class="text-center">Consulta de Libros,Tesis y Préstamos.</h1>
 
-<center><a href="<?php echo PATH ?>admin" class="btn btn-default">Administrador</a></center>
+
 
 </div>
 </div>
 </div>
 </body>
 </html>
+
+
+

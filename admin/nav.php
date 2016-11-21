@@ -8,7 +8,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<?php echo PATH; ?>admin">Administrador</a>
+      <?php 
+       if ($_SESSION[KEY.TIPO]=='admin')
+        {
+          echo "<a class='navbar-brand' href='".PATH."'>Biblioteca</a>";
+        } 
+        else 
+        {
+          echo "<a class='navbar-brand' href='".PATH."admin'>Administrador</a>";
+        }
+       
+
+       ?>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
