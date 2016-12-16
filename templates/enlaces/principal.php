@@ -2,7 +2,7 @@
 <meta http-equiv="refresh" content="1200">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" type="image/x-icon" href="#">
+<link rel="shortcut icon" type="image/x-icon" href="<?php echo PATH; ?>assets/img/logoupci.ico">
 
 <!-- Inicio Bootstrap 3  -->
 <!-- css -->
@@ -38,3 +38,10 @@ $(function () {
 })
 </script>
 
+<script>
+function Mayusculas(field) {
+field.value         = field.value.toUpperCase()
+}
+</script>
+<!-- Fin Script convertir en mayuscula al ingresar-->
+</head>

@@ -8,7 +8,7 @@
 # Other files and folders
 /config.php
 /.htacccess
-
+/templates/enlaces
 # Executables
 # *.swf
 # *.air
@@ -16,5 +16,5 @@
 # *.apk
 
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
+# should NOT bee excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.

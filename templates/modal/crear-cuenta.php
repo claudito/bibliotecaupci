@@ -9,7 +9,7 @@ Crear Cuenta
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				<h4 class="modal-title">Crear Cuenta <i class="glyphicon glyphicon-user"></i></h4>
 			</div>
-			<form action="procesos/Usuario/registrar.php" method="POST">
+			<form action="procesos/Usuario/registrar.php" method="POST" autocomplete="Off">
 			<div class="modal-body">
 			
 			<div class="container-fluid">
@@ -26,11 +26,11 @@ Crear Cuenta
 			<option value="">Tipo de usuario</option>
 			<?php 
             $db     = new Conexion();
-            $query  = "SELECT * FROM tipo_usuarios WHERE estado='on'";
+            $query  = "SELECT * FROM tipo_usuarios";
             $result = $db->query($query);
             while ($fila = mysqli_fetch_object($result))
              {
-              echo "<option value='$fila->idtipo_usuarios'>$fila->descripcion</option>";
+              echo "<option value='$fila->id'>$fila->descripcion</option>";
              } 
 			 ?>
 			</select>
@@ -41,13 +41,14 @@ Crear Cuenta
 			<div class="col-md-6">
 			<div class="form-group">
 			<label>Nombres:</label>
-			<input type="text" name="nombres" class="form-control" required>
+			<input type="text" name="nombres" class="form-control" required onchange="Mayusculas(this)">
 			</div>
 			</div>
 			<div class="col-md-6">
 			<div class="form-group">
 			<label>Apellidos:</label>
-			<input type="text" name="apellidos" class="form-control" required>	
+			<input type="text" name="apellidos" class="form-control"
+			 onchange="Mayusculas(this)" required>	
 			</div>
 			</div>
 			</div>
@@ -55,13 +56,13 @@ Crear Cuenta
 			<div class="col-md-6">
 			<div class="form-group">
 			<label>Correo Electrónico:</label>
-			<input type="email" name="correo" class="form-control" required>
+			<input type="email" name="correo" class="form-control"  required>
 			</div>
 			</div>
 			<div class="col-md-6">
 			<div class="form-group">
 			<label>Celular o Telefóno:</label>
-			<input type="text" name="telefono" class="form-control" required>
+			<input type="text" name="telefono" class="form-control" onchange="Mayusculas(this)" required>
 			</div>	
 			</div>
 			</div>
@@ -69,7 +70,7 @@ Crear Cuenta
 			<div class="col-md-6">
 			<div class="form-group">
 			<label>Código Universidad:</label>
-			<input type="text" name="codigo" maxlength="11" class="form-control" required>
+			<input type="text" name="codigo" maxlength="11" class="form-control" onchange="Mayusculas(this)" required>
 			</div>
 			</div>
 			

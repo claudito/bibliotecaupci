@@ -18,7 +18,7 @@ $this->pass = addslashes($pass);
 function Login()
 {
 $db      = new Conexion();
-$query   = "SELECT * FROM login WHERE UPPER(user)=UPPER('$this->user') 
+$query   = "SELECT * FROM usuarios WHERE UPPER(user)=UPPER('$this->user') 
             AND pass='$this->pass' AND estado='on'";
 $result  = $db->query($query);
 $numfila = $result->num_rows;
@@ -27,7 +27,7 @@ if ($numfila >0)
 {
 	
 session_start();
-$_SESSION[KEY.USUARIO]   = $dato['idlogin'];
+$_SESSION[KEY.USUARIO]   = $dato['id'];
 $_SESSION[KEY.NOMBRES]   = $dato['nombres'];
 $_SESSION[KEY.APELLIDOS] = $dato['apellidos'];
 $_SESSION[KEY.TIPO]      = $dato['tipo'];

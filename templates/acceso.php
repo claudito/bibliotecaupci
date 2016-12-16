@@ -29,7 +29,7 @@ background: url(<?php echo PATH; ?>/assets/img/fondo.jpg) no-repeat center cente
         <form method="post" action="<?php echo PATH ?>procesos/login"  autocomplete="off">
           <img src="<?php echo PATH ?>/assets/img/logoupci.png" class="img-responsive" alt="" />
           <div class="form-group">
-          <input type="text" name="usuario" placeholder="Usuario" required class="form-control input-lg"  autofocus="" />
+          <input type="text" name="usuario" placeholder="Usuario" required class="form-control input-lg"  autofocus="" maxlength="11"  />
           </div>
 
           

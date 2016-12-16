@@ -2,7 +2,8 @@
 
 include('../../config.php');
 include('../../includes/bd/conexion.php');
-include('../../includes/clases/Login.php');
+include('../../includes/clases/Usuarios.php');
+$db = new Conexion();
 
 $nombres    = $_POST['nombres']; 
 $apellidos  = $_POST['apellidos'];
@@ -13,8 +14,28 @@ $correo     = $_POST['correo'];
 $telefono   = $_POST['telefono'];
 $tipo       = $_POST['tipo'];
 
-$login =  new Login($nombres,$apellidos,$codigo,$user,$pass,$correo,
-	                 $telefono,$tipo);
-$login -> Registrar();
+$usuarios =  new Usuarios($nombres,$apellidos,$codigo,'',$user,$pass,'',$correo,$telefono,'','',$tipo,1,'');
+$valor    =  $usuarios -> Registrar();
+
+if ($valor=='existe')
+{
+ echo "<script>
+alert('El Usuario ya esta registrado');
+window.location='".PATH."';
+ </script>";
+} 
+else  if ($valor=='ok')
+{
+ header('Location: '.PATH.'mensaje/usuario-creado');
+}
+else  
+{
+  echo "<script>
+alert('Error al registra,consulte al áre de soporte');
+window.location='".PATH."';
+ </script>";
+}
+
+
 
  ?>
