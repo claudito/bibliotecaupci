@@ -51,7 +51,7 @@ $lista_cabinas  = $cabinas->lista();
 			<div class="panel-heading">
 		    LISTA DE PRESTAMOS
     <div class="pull-right">
-    <a href="../../uploads/lista-de-prestamos" class="btn btn-xs btn-success">Exportar Excel</a>
+    <a href="../../uploads/prestamos-cabinas.xlsx" class="btn btn-xs btn-success">Exportar Excel</a>
     </div>
 			</div>
 			<div class="panel-body">
